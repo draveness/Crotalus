@@ -77,6 +77,7 @@
 		7287D8D91B871A9B00EA386B /* Snake */ = {
 			isa = PBXGroup;
 			children = (
+				7287D8FE1B871AC700EA386B /* Classes */,
 				7287D8DC1B871A9B00EA386B /* AppDelegate.swift */,
 				7287D8DE1B871A9B00EA386B /* ViewController.swift */,
 				7287D8E01B871A9B00EA386B /* Main.storyboard */,
@@ -110,6 +111,13 @@
 				7287D8F11B871A9C00EA386B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7287D8FE1B871AC700EA386B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
