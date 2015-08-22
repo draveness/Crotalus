@@ -15,6 +15,7 @@
 		7287D8F31B871A9C00EA386B /* SnakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7287D8F21B871A9C00EA386B /* SnakeTests.swift */; };
 		7287D9001B871B9D00EA386B /* Snake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7287D8FF1B871B9D00EA386B /* Snake.swift */; };
 		7287D9021B871BEF00EA386B /* String+Snake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7287D9011B871BEF00EA386B /* String+Snake.swift */; };
+		72F5C7681B88876D0019C426 /* NSRange+ToRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F5C7671B88876D0019C426 /* NSRange+ToRange.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		7287D8F21B871A9C00EA386B /* SnakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeTests.swift; sourceTree = "<group>"; };
 		7287D8FF1B871B9D00EA386B /* Snake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snake.swift; sourceTree = "<group>"; };
 		7287D9011B871BEF00EA386B /* String+Snake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Snake.swift"; sourceTree = "<group>"; };
+		72F5C7671B88876D0019C426 /* NSRange+ToRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSRange+ToRange.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			children = (
 				7287D8FF1B871B9D00EA386B /* Snake.swift */,
 				7287D9011B871BEF00EA386B /* String+Snake.swift */,
+				72F5C7671B88876D0019C426 /* NSRange+ToRange.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 		7287D8CF1B871A9B00EA386B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = Draveness;
 				TargetAttributes = {
@@ -230,6 +234,7 @@
 				7287D9021B871BEF00EA386B /* String+Snake.swift in Sources */,
 				7287D8DD1B871A9B00EA386B /* AppDelegate.swift in Sources */,
 				7287D9001B871B9D00EA386B /* Snake.swift in Sources */,
+				72F5C7681B88876D0019C426 /* NSRange+ToRange.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +430,7 @@
 				7287D8F81B871A9C00EA386B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7287D8F91B871A9C00EA386B /* Build configuration list for PBXNativeTarget "SnakeTests" */ = {
 			isa = XCConfigurationList;
@@ -433,6 +439,7 @@
 				7287D8FB1B871A9C00EA386B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

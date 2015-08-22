@@ -12,14 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let label = UILabel(frame: self.view.frame)
+        view.addSubview(label)
+        label.textAlignment = .Center
+        label.attributedText = "HelloHe".snake.match("He").color(0xff0000).string
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
