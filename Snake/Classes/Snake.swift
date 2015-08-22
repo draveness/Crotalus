@@ -103,4 +103,26 @@ class Snake {
         return applyAttributes(NSForegroundColorAttributeName, value: UIColor(red: red, green: green, blue: blue, alpha: 1.0))
     }
 
+    func fontName(fontName: String) -> Snake {
+        for range in self.ranges {
+            let font = self.string.attribute(NSFontAttributeName, atIndex: 0, effectiveRange:nil) as! UIFont
+            self.string.addAttribute(NSFontAttributeName, value: UIFont(name: fontName, size: font.pointSize)!, range: range)
+        }
+        return self
+    }
+
+    func size(size: CGFloat) -> Snake {
+        for range in self.ranges {
+            let font = self.string.attribute(NSFontAttributeName, atIndex: 0, effectiveRange:nil) as! UIFont
+            self.string.addAttribute(NSFontAttributeName, value: UIFont(name: font.fontName, size: size)!, range: range)
+        }
+        return self
+    }
+
+    func font(font: UIFont) -> Snake {
+        return fontName(font.fontName).size(font.pointSize)
+    }
+
+    
+
 }
