@@ -1,0 +1,20 @@
+PODS:
+  - Nimble (1.0.0)
+  - Quick (0.3.1)
+  - Snake (0.1.0)
+
+DEPENDENCIES:
+  - Nimble
+  - Quick (~> 0.3.1)
+  - Snake (from `../`)
+
+EXTERNAL SOURCES:
+  Snake:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Nimble: 8bee528e5fcc403653076545db562d2b5db7bb87
+  Quick: 824572d3d198d51e52cf4aa722cebf7e59952a35
+  Snake: 04b71fce69518f77be4e11ef4c9ee7ffe229b950
+
+COCOAPODS: 0.38.2
