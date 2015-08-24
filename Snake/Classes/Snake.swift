@@ -97,11 +97,10 @@ class Snake {
     }
 
     func color(hex: Int) -> Snake {
-        let red = CGFloat((hex & 0xff0000) >> 16) / 255.0
-        let green = CGFloat((hex & 0x00ff00) >> 8) / 255.0
-        let blue = CGFloat(hex & 0x0000ff) / 255.0
-        return applyAttributes(NSForegroundColorAttributeName, value: UIColor(red: red, green: green, blue: blue, alpha: 1.0))
+        return applyAttributes(NSForegroundColorAttributeName, value: colorFrom(hex: hex))
     }
+
+    // MARK: - Font
 
     func fontName(fontName: String) -> Snake {
         for range in self.ranges {
@@ -123,6 +122,31 @@ class Snake {
         return fontName(font.fontName).size(font.pointSize)
     }
 
+    // MARK: - Style
+
+    var underline: Snake {
+        return underline(NSUnderlineStyle.StyleSingle)
+    }
+
+    func underline(underline: NSUnderlineStyle) -> Snake {
+        return applyAttributes(NSUnderlineStyleAttributeName, value: underline.rawValue)
+    }
+
+    func underline(color: UIColor) -> Snake {
+        return applyAttributes(NSUnderlineColorAttributeName, value: color)
+    }
+
+    func underline(hex: Int) -> Snake {
+        return applyAttributes(NSUnderlineColorAttributeName, value: colorFrom(hex: hex))
+    }
+
     
+
+    private func colorFrom(#hex: Int) -> UIColor {
+        let red = CGFloat((hex & 0xff0000) >> 16) / 255.0
+        let green = CGFloat((hex & 0x00ff00) >> 8) / 255.0
+        let blue = CGFloat(hex & 0x0000ff) / 255.0
+        return  UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+    }
 
 }
