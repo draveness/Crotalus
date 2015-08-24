@@ -85,13 +85,6 @@ public class Snake {
         return matchAllWithOptions(substirng, nil)
     }
     
-    private func applyAttributes(attributeName: String, value: AnyObject) -> Snake {
-        for range in self.ranges {
-            self.string.addAttribute(attributeName, value: value, range: range)
-        }
-        return self
-    }
-    
     public func color(color: UIColor) -> Snake {
         return applyAttributes(NSForegroundColorAttributeName, value: color)
     }
@@ -104,16 +97,26 @@ public class Snake {
     
     public func fontName(fontName: String) -> Snake {
         for range in self.ranges {
-            let font = self.string.attribute(NSFontAttributeName, atIndex: 0, effectiveRange:nil) as! UIFont
-            self.string.addAttribute(NSFontAttributeName, value: UIFont(name: fontName, size: font.pointSize)!, range: range)
+            if let font = self.string.attribute(NSFontAttributeName, atIndex: 0, effectiveRange:nil) as? UIFont {
+                if let currentFont = UIFont(name: fontName, size: font.pointSize) {
+                    self.string.addAttribute(NSFontAttributeName, value: currentFont, range: range)
+                }
+            } else {
+                if let currentFont = UIFont(name: fontName, size: UIFont.systemFontSize()) {
+                    self.string.addAttribute(NSFontAttributeName, value: currentFont, range: range)
+                }
+            }
         }
         return self
     }
     
     public func size(size: CGFloat) -> Snake {
         for range in self.ranges {
-            let font = self.string.attribute(NSFontAttributeName, atIndex: 0, effectiveRange:nil) as! UIFont
-            self.string.addAttribute(NSFontAttributeName, value: UIFont(name: font.fontName, size: size)!, range: range)
+            if let font = self.string.attribute(NSFontAttributeName, atIndex: 0, effectiveRange:nil) as? UIFont {
+                self.string.addAttribute(NSFontAttributeName, value: UIFont(name: font.fontName, size: size)!, range: range)
+            } else {
+                self.string.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(size), range: range)
+            }
         }
         return self
     }
@@ -138,6 +141,29 @@ public class Snake {
     
     public func underline(hex: Int) -> Snake {
         return applyAttributes(NSUnderlineColorAttributeName, value: colorFrom(hex: hex))
+    }
+    
+    public func attach(image: UIImage?) -> Snake {
+        let imageAttachment = NSTextAttachment()
+        imageAttachment.image = image
+        string.appendAttributedString(NSAttributedString(attachment: imageAttachment))
+        return self
+    }
+    
+    public func attach(imageStr: String) -> Snake {
+        let imageAttachment = NSTextAttachment()
+        imageAttachment.image = UIImage(named: imageStr)
+        string.appendAttributedString(NSAttributedString(attachment: imageAttachment))
+        return self
+    }
+    
+    // MARK: - Private
+    
+    private func applyAttributes(attributeName: String, value: AnyObject) -> Snake {
+        for range in self.ranges {
+            self.string.addAttribute(attributeName, value: value, range: range)
+        }
+        return self
     }
     
     private func colorFrom(#hex: Int) -> UIColor {
