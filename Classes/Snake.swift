@@ -140,8 +140,6 @@ class Snake {
         return applyAttributes(NSUnderlineColorAttributeName, value: colorFrom(hex: hex))
     }
 
-    
-
     private func colorFrom(#hex: Int) -> UIColor {
         let red = CGFloat((hex & 0xff0000) >> 16) / 255.0
         let green = CGFloat((hex & 0x00ff00) >> 8) / 255.0
