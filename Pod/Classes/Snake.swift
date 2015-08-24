@@ -92,6 +92,82 @@ public class Snake {
     public func color(hex: Int) -> Snake {
         return applyAttributes(NSForegroundColorAttributeName, value: colorFrom(hex: hex))
     }
+
+    public var black: Snake {
+        get {
+            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.blackColor())
+        }
+    }
+    public var darkGray: Snake {
+        get {
+            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.darkGrayColor())
+        }
+    }
+    public var lightGray: Snake {
+        get {
+            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.lightGrayColor())
+        }
+    }
+    public var white: Snake {
+        get {
+            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.whiteColor())
+        }
+    }
+    public var gray: Snake {
+        get {
+            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.grayColor())
+        }
+    }
+    public var red: Snake {
+        get {
+            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.redColor())
+        }
+    }
+    public var green: Snake {
+        get {
+            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.greenColor())
+        }
+    }
+    public var blue: Snake {
+        get {
+            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.blueColor())
+        }
+    }
+    public var cyan: Snake {
+        get {
+            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.cyanColor())
+        }
+    }
+    public var yellow: Snake {
+        get {
+            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.yellowColor())
+        }
+    }
+    public var magenta: Snake {
+        get {
+            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.magentaColor())
+        }
+    }
+    public var orange: Snake {
+        get {
+            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.orangeColor())
+        }
+    }
+    public var purple: Snake {
+        get {
+            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.purpleColor())
+        }
+    }
+    public var brown: Snake {
+        get {
+            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.brownColor())
+        }
+    }
+    public var clear: Snake {
+        get {
+            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.clearColor())
+        }
+    }
     
     // MARK: - Font
     

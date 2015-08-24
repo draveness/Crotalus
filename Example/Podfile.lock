@@ -10,11 +10,11 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   Snake:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
   Nimble: 8bee528e5fcc403653076545db562d2b5db7bb87
   Quick: 824572d3d198d51e52cf4aa722cebf7e59952a35
-  Snake: 04b71fce69518f77be4e11ef4c9ee7ffe229b950
+  Snake: 674c0ae6427550c2dec9596261f8957d5a3c54bb
 
 COCOAPODS: 0.38.2
