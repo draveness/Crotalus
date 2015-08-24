@@ -17,9 +17,10 @@ class ViewController: UIViewController {
         label.frame = view.frame
         view.addSubview(label)
         
-        let image = NSTextAttachment()
-        image.image = UIImage(named: "logo")
-        label.attributedText = "Hello".snake.color(0xff0000).match("He").color(0x00ff00).all.fontName("Sanrif").string
+//        let image = NSTextAttachment()
+//        image.image = UIImage(named: "logo")
+//        label.attributedText = "Hello".snake.color(0xff0000).match("He").color(0x00ff00).all.fontName("Sanrif").string
+        label.attributedText = "Hello".red
     }
 
 }

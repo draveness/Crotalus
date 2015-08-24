@@ -25,4 +25,81 @@ public extension String {
             }
         }
     }
+
+    public var black: NSMutableAttributedString {
+        get {
+            return self.snake.black.string
+        }
+    }
+    public var darkGray: NSMutableAttributedString {
+        get {
+            return self.snake.darkGray.string
+        }
+    }
+    public var lightGray: NSMutableAttributedString {
+        get {
+            return self.snake.lightGray.string
+        }
+    }
+    public var white: NSMutableAttributedString {
+        get {
+            return self.snake.white.string
+        }
+    }
+    public var gray: NSMutableAttributedString {
+        get {
+            return self.snake.gray.string
+        }
+    }
+    public var red: NSMutableAttributedString {
+        get {
+            return self.snake.red.string
+        }
+    }
+    public var green: NSMutableAttributedString {
+        get {
+            return self.snake.green.string
+        }
+    }
+    public var blue: NSMutableAttributedString {
+        get {
+            return self.snake.blue.string
+        }
+    }
+    public var cyan: NSMutableAttributedString {
+        get {
+            return self.snake.cyan.string
+        }
+    }
+    public var yellow: NSMutableAttributedString {
+        get {
+            return self.snake.yellow.string
+        }
+    }
+    public var magenta: NSMutableAttributedString {
+        get {
+            return self.snake.magenta.string
+        }
+    }
+    public var orange: NSMutableAttributedString {
+        get {
+            return self.snake.orange.string
+        }
+    }
+    public var purple: NSMutableAttributedString {
+        get {
+            return self.snake.purple.string
+        }
+    }
+    public var brown: NSMutableAttributedString {
+        get {
+            return self.snake.brown.string
+        }
+    }
+    public var clear: NSMutableAttributedString {
+        get {
+            return self.snake.clear.string
+        }
+    }
+
 }
