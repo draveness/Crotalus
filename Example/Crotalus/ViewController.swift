@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Crolatus
+import Crotalus
 
 class ViewController: UIViewController {
 
