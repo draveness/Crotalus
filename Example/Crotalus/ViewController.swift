@@ -7,18 +7,20 @@
 //
 
 import UIKit
+import Crolatus
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+        let label = UILabel()
+        label.frame = view.frame
+        view.addSubview(label)
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        let image = NSTextAttachment()
+        image.image = UIImage(named: "logo")
+        label.attributedText = "Hello".crotalus.color(0xff0000).match("He").color(0x00ff00).all.fontName("Sanrif").string
+        //        label.attributedText = "Hello".red
     }
-
 }
 
