@@ -1,5 +1,5 @@
 PODS:
-  - Crotalus (0.1.0)
+  - Crotalus (0.2.0)
   - Nimble (1.0.0)
   - Quick (0.3.1)
 
@@ -13,7 +13,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Crotalus: f9d5635b685961fef2f57d3605e54fc8abb71874
+  Crotalus: 9e66c61ee6710d7f401954f9aabd9868f21437e5
   Nimble: 8bee528e5fcc403653076545db562d2b5db7bb87
   Quick: 824572d3d198d51e52cf4aa722cebf7e59952a35
 
