@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'Crotalus_Example', :exclusive => true do
+  pod "Crotalus", :path => "../"
+end
+
+target 'Crotalus_Tests', :exclusive => true do
+  pod "Crotalus", :path => "../"
+
+  pod 'Quick', '~> 0.3.1'
+  pod 'Nimble'
+end
