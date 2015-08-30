@@ -232,6 +232,10 @@ public class Crotalus {
         string.appendAttributedString(NSAttributedString(attachment: imageAttachment))
         return self
     }
+
+    public func shadow(shadow: NSShadow) -> Crotalus {
+        return applyAttributes(NSShadowAttributeName, value: shadow)
+    }
     
     // MARK: - Private
     
