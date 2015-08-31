@@ -236,6 +236,14 @@ public class Crotalus {
     public func shadow(shadow: NSShadow) -> Crotalus {
         return applyAttributes(NSShadowAttributeName, value: shadow)
     }
+
+    public func link(link: NSURL) -> Crotalus {
+        return applyAttributes(NSLinkAttributeName, value: link)
+    }
+
+    public func link(link: NSString) -> Crotalus {
+        return applyAttributes(NSLinkAttributeName, value: link)
+    }
     
     // MARK: - Private
     
