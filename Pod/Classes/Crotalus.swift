@@ -244,6 +244,10 @@ public class Crotalus {
     public func link(link: NSString) -> Crotalus {
         return applyAttributes(NSLinkAttributeName, value: link)
     }
+
+    public func baselineOffset(offset: NSNumber) -> Crotalus {
+        return applyAttributes(NSBaselineOffsetAttributeName, value: offset)
+    }
     
     // MARK: - Private
     
