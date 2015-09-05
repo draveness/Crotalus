@@ -248,6 +248,10 @@ public class Crotalus {
     public func baselineOffset(offset: NSNumber) -> Crotalus {
         return applyAttributes(NSBaselineOffsetAttributeName, value: offset)
     }
+
+    public func kern(number: NSNumber) -> Crotalus {
+        return applyAttributes(NSKernAttributeName, value: number)
+    }
     
     // MARK: - Private
     
