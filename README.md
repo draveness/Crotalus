@@ -5,6 +5,18 @@
 [![License](https://img.shields.io/cocoapods/l/Crotalus.svg?style=flat)](http://cocoapods.org/pods/Crotalus)
 [![Platform](https://img.shields.io/cocoapods/p/Crotalus.svg?style=flat)](http://cocoapods.org/pods/Crotalus)
 
+Crotalus is an convenient and fast approach to create `AttributedString` in Swift. This library is inspired by [colorize](https://github.com/fazibear/colorize) which is a ruby gem colorize string.
+
+If you would like to use chainable syntax in Objective-C use [Typeset](https://github.com/Draveness/Typeset) instead.
+
+## With Crotalus
+
+With Cratalus, you can create attributed string much more easier than other way.
+
+```swift
+"Hello".crotalus.color(0xff0000).match("He").color(0x00ff00).all.fontName("Sanrif").string
+```
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
