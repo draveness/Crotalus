@@ -9,7 +9,7 @@
 import UIKit
 
 public class Crotalus {
-
+    
     public let string: NSMutableAttributedString
     private var ranges: [NSRange] = []
     
@@ -56,7 +56,7 @@ public class Crotalus {
         return self
     }
     
-    public func matchWithOptions(substring: String, _ options: NSStringCompareOptions) -> Crotalus {
+    public func matchWithOptions(substring: String, _ options: NSStringCompareOptions = .LiteralSearch) -> Crotalus {
         let string = self.string.string as NSString
         ranges.removeAll()
         ranges.append(string.rangeOfString(substring, options: options))
@@ -64,10 +64,10 @@ public class Crotalus {
     }
     
     public func match(substring: String) -> Crotalus {
-        return matchWithOptions(substring, nil)
+        return matchWithOptions(substring)
     }
     
-    public func matchAllWithOptions(substring: String, _ options: NSStringCompareOptions) -> Crotalus {
+    public func matchAllWithOptions(substring: String, _ options: NSStringCompareOptions = .LiteralSearch) -> Crotalus {
         let string = self.string.string as NSString
         var range = string.rangeOfString(substring, options: options)
         ranges.removeAll()
@@ -82,7 +82,7 @@ public class Crotalus {
     }
     
     public func matchAll(substirng: String) -> Crotalus {
-        return matchAllWithOptions(substirng, nil)
+        return matchAllWithOptions(substirng)
     }
     
     public func color(color: UIColor) -> Crotalus {
@@ -92,7 +92,7 @@ public class Crotalus {
     public func color(hex: Int) -> Crotalus {
         return applyAttributes(NSForegroundColorAttributeName, value: colorFrom(hex: hex))
     }
-
+    
     public var black: Crotalus {
         get {
             return applyAttributes(NSForegroundColorAttributeName, value: UIColor.blackColor())
@@ -232,23 +232,23 @@ public class Crotalus {
         string.appendAttributedString(NSAttributedString(attachment: imageAttachment))
         return self
     }
-
+    
     public func shadow(shadow: NSShadow) -> Crotalus {
         return applyAttributes(NSShadowAttributeName, value: shadow)
     }
-
+    
     public func link(link: NSURL) -> Crotalus {
         return applyAttributes(NSLinkAttributeName, value: link)
     }
-
+    
     public func link(link: NSString) -> Crotalus {
         return applyAttributes(NSLinkAttributeName, value: link)
     }
-
+    
     public func baselineOffset(offset: NSNumber) -> Crotalus {
         return applyAttributes(NSBaselineOffsetAttributeName, value: offset)
     }
-
+    
     public func kern(number: NSNumber) -> Crotalus {
         return applyAttributes(NSKernAttributeName, value: number)
     }
@@ -262,7 +262,7 @@ public class Crotalus {
         return self
     }
     
-    private func colorFrom(#hex: Int) -> UIColor {
+    private func colorFrom(hex hex: Int) -> UIColor {
         let red = CGFloat((hex & 0xff0000) >> 16) / 255.0
         let green = CGFloat((hex & 0x00ff00) >> 8) / 255.0
         let blue = CGFloat(hex & 0x0000ff) / 255.0

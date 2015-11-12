@@ -20,12 +20,12 @@ public extension String {
                 return crotalus
             } else {
                 crotalus = Crotalus(self)
-                objc_setAssociatedObject(self, &CrotalusAssociatedKey, crotalus, objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN))
+                objc_setAssociatedObject(self, &CrotalusAssociatedKey, crotalus, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
                 return crotalus
             }
         }
     }
-
+    
     public var black: NSMutableAttributedString {
         get {
             return self.crotalus.black.string
@@ -107,5 +107,5 @@ public extension String {
     public func color(hex: Int) -> NSMutableAttributedString {
         return self.crotalus.color(hex).string
     }
-
+    
 }
