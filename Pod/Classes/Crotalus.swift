@@ -178,9 +178,16 @@ public class Crotalus {
                     self.string.addAttribute(NSFontAttributeName, value: currentFont, range: range)
                 }
             } else {
-                if let currentFont = UIFont(name: fontName, size: UIFont.systemFontSize()) {
-                    self.string.addAttribute(NSFontAttributeName, value: currentFont, range: range)
-                }
+                #if os(iOS)
+                    if let currentFont = UIFont(name: fontName, size: UIFont.systemFontSize()) {
+                        self.string.addAttribute(NSFontAttributeName, value: currentFont, range: range)
+                    }
+                #else
+                    let systemFont = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+                    if let currentFont = UIFont(name: fontName, size: systemFont.pointSize) {
+                        self.string.addAttribute(NSFontAttributeName, value: currentFont, range: range)
+                    }
+                #endif
             }
         }
         return self
